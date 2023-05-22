@@ -1,0 +1,707 @@
+
+/*  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx offline font conecty xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
+
+/* ========================================== Default CSS ================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5F5F5;;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+ul,
+li,
+ol {
+    list-style: none !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #37404d;
+    --p-teg-color: #464d65;
+    --yellow-button-color: #F9BC6E;
+}
+
+.text-yellow {
+    color: #F9BC6E !important;
+}
+
+.bg-yellow {
+    background-color: #F9BC6E !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.mt-15{
+    margin-top: 150px!important;
+}
+.mt-m-13{
+    margin-top: -130px!important;
+}
+.ptb-60 {
+    padding: 60px 0;
+}
+.pb-60{
+    padding-bottom: 60px;
+}
+
+.ptb-120 {
+    padding: 120px 0;
+}
+.pb-120{
+    padding-bottom: 120px;
+}
+
+.mob_divice {
+    display: none;
+}
+
+/* =================== toggle icon csss ==================*/
+
+.toggle {
+    display: none !important;
+}
+
+.toggle {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    background: #fff;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    border: 1px solid #f9bd6ead;
+}
+
+.toggle span {
+    position: absolute;
+    width: 35px;
+    height: 4px;
+    background: var(--yellow-button-color);
+    border-radius: 10px;
+    transition: 0.5s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle span:nth-child(1) {
+    transform: translateY(-12px);
+    width: 35px;
+    left: 5px;
+}
+
+.toggle.active span:nth-child(1) {
+    width: 40px;
+    transform: translateY(0) rotate(45deg);
+    transition-delay: 0.125s;
+
+}
+
+.toggle span:nth-child(2) {
+    transform: translateY(8px);
+    width: 35px;
+    left: 5px;
+}
+
+.toggle.active span {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translatey(-50%);
+    background: var(--white-color);
+}
+
+.toggle.active {
+    background-color: var(--yellow-button-color);
+}
+
+.toggle.active span:nth-child(2) {
+    width: 40px;
+    transform: translateY(0) rotate(315deg);
+    transition-delay: 0.25s;
+}
+
+.toggle.active span:nth-child(3) {
+    transform: translateX(60px);
+}
+
+/* ::selection {
+    color: red;
+    background: yellow;
+  } */
+
+/* ========================================== header section CSS ================================= */
+
+.bg_theme {
+    background: #FFFFFF;
+    box-shadow: 0px 12px 22px rgba(0, 0, 0, 0.05);
+    /* border-bottom: 1px solid #f9bd6eae; */
+}
+
+.logo img {
+    width: 193px;
+}
+
+.main_menu li a {
+    display: block;
+    padding: 22px 25px;
+    color: var(--black-color);
+    transition: 0.3s;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main_menu li a.active,
+.main_menu li:hover > a{
+    color: var(--yellow-button-color);
+}
+.main_menu li{
+    position: relative;
+    transform: 0.5s;
+}
+.sub_menu{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0px 12px 22px rgba(0, 0, 0, 0.05);
+    display: none;
+    transition: 0.5s;
+    width: 180px;
+    border: 1px solid rgba(128, 128, 128, 0.264);
+    border-radius: 8px;
+}
+.main_menu li:hover .sub_menu{
+    display: block;
+}
+.sub_menu li:hover a{
+    background-color: var(--yellow-button-color);
+    color: var(--white-color);
+}
+.sub_menu li a{
+    display: block;
+    padding: 12px 25px;
+}
+
+.contact_btn {
+    border: 1px solid var(--yellow-button-color);
+    color: var(--yellow-button-color);
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.contact_btn:hover {
+    background-color: var(--yellow-button-color);
+    border: 1px solid var(--yellow-button-color);
+    color: var(--white-color);
+}
+
+.mob_right_icon{
+    position: absolute;
+    right: 10%;
+}
+
+.sticky {
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    animation: fead 1s ease-in-out;
+    z-index: 10;
+    background-color: var(--white-color);
+    border-bottom: 1px solid #DDEDFC;
+    box-shadow: 0px 2px 5px rgba(83, 165, 241, 0.25);
+
+}
+
+@keyframes fead {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#scroll_top {
+    color: var(--yellow-button-color);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid var(--yellow-button-color);
+    text-align: center;
+    line-height: 50px;
+    font-size: 22px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    transition: 1s;
+    opacity: 0;
+    z-index: 1111;
+}
+
+#scroll_top i {
+    animation: up-down 1s alternate infinite;
+}
+
+@keyframes up-down {
+    0% {
+        transform: translatey(-4px);
+    }
+
+    100% {
+        transform: translatey(4px);
+    }
+}
+
+
+/* ========================================== home banner section CSS ================================= */
+
+.home_page_bg{
+    background-image: url(../image/Vector.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* padding: 10px 0; */
+    background-position: bottom;
+    width: 100%;
+}
+.home_page_contant .rect_border{
+    position: relative;
+}
+.home_page_contant .rect_border::after{
+    content: '';
+    padding: 7px 0;
+    width: 100%;
+    display: inline-block;
+    background-color: var(--yellow-button-color);
+    opacity: 0.2;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+.image_logo_03 span img{
+    width: 130px;
+    object-fit: cover;
+} 
+.contact_btn02{
+    background-color: var(--yellow-button-color);
+    color: var(--white-color);
+    font-weight: 600;
+    border: 5px double transparent;
+    transition: 0.3s;
+}
+.contact_btn02:hover{
+    border: 5px double whitesmoke;
+}
+
+/* ========================================== how it work section CSS ================================= */
+
+.title_line{
+    width: 90px;
+    height: 3px;
+    background-color: var(--yellow-button-color);
+}
+.how_it_box{
+    background-color: var(--white-color);
+    box-shadow: 0px 69px 114px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    position: relative;
+}
+.how_it_number_left{
+    position: absolute;
+    top: -20%;
+    left: 0;
+    color: var(--yellow-button-color);
+    opacity: 0.15;
+}
+.how_it_number_right{
+    position: absolute;
+    top: -20%;
+    right: 0;
+    color: var(--yellow-button-color);
+    opacity: 0.15;
+}
+
+/* ========================================== book a part section CSS ================================= */
+
+.line_gradient{
+    width: 90px;
+    height: 3px;
+    background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.31) 123.02%);
+    border-radius: 50px;
+}
+.book_part_right .form-control{
+    padding: 10px 12px;
+    border-radius: 50px;
+}
+.book_btn{
+    padding: 8px 12px;
+    border-radius: 50px;
+    width: 100%;
+    background-color: #C59E6F;
+    color: var(--white-color);
+    border: 5px double transparent;
+    transition: 0.3s;
+}
+.book_btn:hover{
+    background-color: #37404d;
+    border: 5px double #C59E6F;
+}
+
+/* ========================================== testimonial part section CSS ================================= */
+
+.slider_part{
+    background-color: var(--white-color);
+    box-shadow: 0px 69px 114px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+}
+.slider_image{
+    position: relative;
+}
+.slider_image img{
+    width: 200px!important;
+    
+}
+.quote_image{
+    position: absolute;
+    bottom: 0;
+    left: 14%;
+    display: inline-block;
+}
+#slider1.owl-theme .item{
+    position: relative!important;
+}
+#slider1.owl-theme .owl-nav{
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+}
+#slider1.owl-theme .owl-nav [class*=owl-]:hover{
+    background-color: transparent!important;
+}
+#slider1.owl-carousel .owl-nav button.owl-prev{
+    color: #959EAD!important;
+}
+#slider1.owl-carousel .owl-nav button.owl-prev:hover{
+    color: var(--yellow-button-color)!important;
+}
+#slider1.owl-carousel .owl-nav button.owl-next{
+    color: var(--yellow-button-color)!important;
+}
+#slider1.owl-carousel .owl-nav button.owl-next:hover{
+    color: #959EAD!important;
+}
+
+/* ========================================== degital marketing articles part section CSS ================================= */
+
+.marketing_part .marketin_box{
+    background-color: #DFA762;
+    box-shadow: 0px 69px 114px rgba(124, 20, 253, 0.08);
+    border-radius: 30px;
+}
+.right_btn{
+    background-color: var(--white-color);
+    color: var(--black-color);
+    font-weight: 600;
+    border: 5px double transparent;
+    transition: 0.3s;
+}
+.right_btn:hover{
+    border: 5px double rgb(135, 133, 133);
+    color: var(--yellow-button-color);
+}
+
+/* ========================================== why dapixel section CSS ================================= */
+
+.contact_btn02{
+    background-color: var(--yellow-button-color);
+    color: var(--white-color);
+    font-weight: 600;
+    border: 5px double transparent;
+    transition: 0.3s;
+}
+.contact_btn02:hover{
+    border: 5px double whitesmoke;
+}
+
+/* ========================================== footer section CSS ================================= */
+
+.footer_social_icon li{
+    margin-right: 10px;
+}
+.footer_social_icon li a{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+    background-color: #fff;
+    border: 5px double transparent;
+    color: var(--black-color);
+    display: block;
+    font-size: 18px;
+    transition: 0.5s;
+}
+.footer_social_icon li a:hover{
+    background-color: var(--black-color);
+    color: var(--white-color);
+    border: 5px double #C59E6F;
+}
+.footer_info_2 p{
+    margin-bottom: 10px;
+}
+.footer_info_2 p a{
+    color: black;
+}
+
+.footer_info_3 p{
+    margin-bottom: 10px;
+}
+.footer_info_3 p a{
+    color: black;
+}
+
+
+/* ========================================== blog page section CSS ================================= */
+
+.home_page_bg_01{
+    background-image: url(../image/Vector.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 120px 0;
+    background-position: top;
+    width: 100%;
+}
+.details_box{
+    background-color: var(--white-color);
+    box-shadow: 0px 69px 114px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+.pagination .page-link{
+    border: none!important;
+    margin-left: 5px!important;
+    border-radius: 10px;
+    color: var(--black-color)!important;
+    font-weight: 600;
+
+}
+.disabled>.page-link, .page-link.disabled{
+    color: var(--black-color)!important;
+    background-color: transparent!important;
+    font-weight: 600;
+}
+.page-item:last-child .page-link{
+    background-color: transparent!important;
+    color: var(--yellow-button-color)!important;
+    font-weight: 600;
+}
+
+.page-link:focus{
+    background-color: var(--yellow-button-color)!important;
+    box-shadow: 0 0 0 0.25rem #f9bd6e41!important;
+}
+
+/* ========================================== team section CSS ================================= */
+
+.team_box{
+    background-color: var(--white-color);
+    box-shadow: 0px 69px 114px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+.team_image img{
+    width: 110px;
+    padding: 2px;
+    border: 3px solid var(--yellow-button-color);
+    border-radius: 50%;
+}
+.team_box .team_mail{
+    color: #B070FF!important;
+}
+
+/* ========================================== Services section CSS ================================= */
+
+.home_page_bg_02{
+    background-image: url(../image/Vector.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* padding: 10px 0; */
+    background-position: bottom;
+    width: 100%;
+}
+.marketing_box{
+    background-color: var(--white-color);
+    box-shadow: 0px 69px 114px rgba(0, 0, 0, 0.08);
+    border-radius: 30px;
+}
+.marketing_image_small img{
+    width: 100px;
+}
+.contact_part{
+    background-color: var(--white-color);
+    box-shadow: 0px 69px 114px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    padding: 90px 100px;
+    border-top: 5px solid var(--yellow-button-color);
+}
+.contact_left .contact_info p a{
+    color: var(--black-color);
+    transition: 0.3s;
+}
+.contact_left .contact_info p a:hover{
+    color: var(--yellow-button-color);
+}
+.contact_social_icon li{
+    margin-right: 10px;
+}
+
+.contact_social_icon li a{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+    background-color: var(--yellow-button-color);
+    border: 5px double transparent;
+    color: var(--white-color);
+    display: block;
+    font-size: 18px;
+    transition: 0.5s;
+}
+.contact_social_icon li a:hover{
+    background-color: var(--black-color);
+    color: var(--white-color);
+    border: 5px double #ffffff;
+}
+.book_contact_btn{
+    background-color: white;
+    color: var(--yellow-button-color);
+    font-weight: 600;
+    border: 2px solid var(--yellow-button-color);
+    transition: 0.3s;
+    border-radius: 15px;
+}
+.book_contact_btn:hover{
+    color: var(--white-color);
+    background-color: var(--yellow-button-color);
+    border: 2px solid var(--yellow-button-color);
+}
+.contact_right input.form-control{
+    height: 55px;
+    padding-left: 30px;
+    border-radius: 15px;
+    border: 1px solid #C8C8C8;
+}
+.contact_right textarea.form-control{
+    padding-left: 30px;
+    border-radius: 15px;
+    border: 1px solid #C8C8C8;
+
+}
+.form-control:focus{
+    color: var(--bs-body-color);
+    border-color: #F9BC6E!important;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #F9BC6E40!important;
+}
+
+/* ========================================== step section CSS ================================= */
+
+.step_part{
+    background-image: url(../image/DesignElement.png);
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+    padding: 50px 0;
+    /* height: 50px; */
+}
+.step_box{
+    background-color: var(--white-color);
+    box-shadow: 0px 69px 114px rgba(0, 0, 0, 0.08);
+    border-radius: 30px;
+}
+
+/* ========================================== industries section CSS ================================= */
+
+.industries_box{
+    background-color: var(--white-color);
+    box-shadow: 0px 69px 114px rgba(0, 0, 0, 0.08);
+    border-radius: 30px;
+    height: 100%;
+}
+
+.industries_image img{
+    width: 80px;
+}
+.industries_box p{
+    margin-bottom: 0;
+}
+.get_free p{
+    width: 50%;
+}
+.company_image img{
+    width: 165px!important;
+    object-fit: cover;
+}
+
+/* ========================================== about section CSS ================================= */
+
+.home_page_bg_03{
+    background-image: url(../image/Vector.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* padding: 10px 0; */
+    background-position: bottom;
+    width: 100%;
+}
+.home_page_bg_03 .home_page_contant p{
+    width: 85%;
+}
+
+/* ========================================== contact section CSS ================================= */
+.modal-header .btn-close{
+    background-color: var(--yellow-button-color);
+    opacity: 1;
+}
+.btn-close{
+    background-image: url(../image/close-01.png)!important;
+}
+
+/* ================================================================================================ */
